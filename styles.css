@@ -1,0 +1,498 @@
+@media (min-width: 1200px) and (max-width: 1920px) {
+
+.left-div {
+    float: left;
+  }
+  
+  .right-div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+  
+  .right-div div {
+    margin-left: 10px;
+    white-space: nowrap;
+  }
+  .right-div img {
+    display:none;
+  }
+  
+  #center{
+      align-items: center;
+      justify-content: center;
+      clear: both;
+      text-align: center;
+      background-color: rgb(74, 127, 185);
+      height: 250px;
+      position: relative;
+  }
+  #center h3{
+  
+      position: absolute;
+      top: 50%; 
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* 特別了解此行 */
+  }
+
+  .content{
+    
+  /* background-color: rgb(94, 94, 18); */
+  width: 1200px;
+  justify-content: center;
+  align-items: center;
+  /* justify-content: space-between; */
+  }
+  .content1{
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+    clear: both;
+    text-align: left;
+    height:50px;
+    margin: 0 auto;
+    /* width:1200px; */
+  }
+  #promotion1{
+      flex:none;
+      width:calc(100%/ 3);
+      /* margin-left: 20px; */
+      background-color: rgb(176, 199, 192);
+  }
+  #promotion2{
+      flex:none;
+      width:calc(100%/ 3);
+      margin-left: 20px;
+      background-color: rgb(176, 199, 192);
+  }
+  #promotion3{
+      
+      width:calc(100%/ 3);
+      margin-left: 20px;
+      background-color: rgb(176, 199, 192);
+      flex-wrap: nowrap;
+  }
+  .content1 img{
+      width:80px;
+      float: left;
+      margin-right: 10px;
+  }
+  .promotion span {
+    flex: 1;
+    /* align-self: flex-start; */
+    /* display: flex;
+    align-items: center;
+    text-align: left; */
+  }
+  .content2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* clear: both; */
+    margin-top:10px;
+    
+    /* margin: 0 auto; */
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+  .titlepic img{
+      flex-wrap: nowrap;
+      width: 180px;
+      height:180px;
+      /* justify-content: center; */
+      flex-shrink: 1;
+      flex-grow: 1;
+      flex:auto;
+      
+  }
+  .titlepic2 img{
+    width: 180px;
+    height:180px;
+      /* margin-right: 20px; */
+      /* display:block; */
+      min-width: 100px;
+      flex-shrink: 1;
+      flex-grow: 1;
+      flex:auto;
+      /* float: left; */
+  }
+  .title{
+      width: 180px;
+      background-color: rgb(176, 199, 192);
+      /* flex:none; */
+      flex-shrink: 1;
+      flex-grow: 1;
+  }
+  .left-box {
+    margin-right: 0;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (min-width: 600px) and (max-width: 1200px) {
+    .content {
+      background-color: red;
+    }
+
+.left-div {
+  float: left;
+}
+
+.right-div {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.right-div div {
+  margin-left: 10px;
+  white-space: nowrap;
+}
+.right-div img {
+  display:none;
+}
+#center{
+    align-items: center;
+    justify-content: center;
+    clear: both;
+    text-align: center;
+    background-color: rgb(74, 127, 185);
+    height: 250px;
+    position: relative;
+}
+#center h3{
+
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 特別了解此行 */
+}
+
+.content{
+  
+/* background-color: rgb(94, 94, 18); */
+width:90%;
+/* justify-content: center; */
+align-items: center;
+/* justify-content: space-between; */
+flex-shrink: 0;
+}
+.content1{
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  /* justify-content: space-between; */
+  clear: both;
+  text-align: left;
+  height:50px;
+  margin: 0 auto;
+  /* width:1200px; */
+  flex-wrap: wrap;
+  column-gap: 10%;
+}
+#promotion1{
+    flex:none;
+    width:calc(90%/ 2);
+    /* margin-left: 20px; */
+    background-color: rgb(176, 199, 192);
+    /* flex-grow:1; */
+}
+#promotion2{
+    /* flex-grow:1; */
+    width:calc(90%/2);
+    justify-content: end;
+    /* margin-left: auto;  */
+    background-color: rgb(176, 199, 192);
+    
+}
+#promotion3{
+    flex-grow: 1;
+    width:100%;
+    margin-top: 20px;
+    background-color: rgb(176, 199, 192);
+    
+}
+.content1 img{
+    width:80px;
+    float: left;
+    height:50px;
+    margin-right: 10px;
+}
+.promotion span {
+  flex: 1;
+  /* align-self: flex-start; */
+  /* display: flex;
+  align-items: center;
+  text-align: left; */
+}
+.content2{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* clear: both; */
+  margin-top:10px;
+  /* margin: 0 auto; */
+  margin-bottom: 20px;
+  column-gap: 20px;
+  /* width:25%; */
+
+  
+}
+.titlepic img{
+    width:25%;
+    flex-wrap: nowrap;
+    /* width:100%; */
+    /* justify-content: center; */
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis:0;
+    
+}
+.titlepic2 img{
+
+    /* margin-right: 20px; */
+    /* display:block; */
+
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis:0;
+    /* float: left; */
+}
+.title{
+
+    background-color: rgb(176, 199, 192);
+    /* flex:none; */
+    
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis:0;
+}
+.left-box {
+  margin-right: 0;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+  }  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (min-width: 360px) and (max-width: 600px) {
+    .content {
+      background-color: green;
+    }
+    .top {
+      display: flex;
+      align-items: center; 
+    }
+
+    .left-div {
+      float: left;
+      
+    }
+    
+    .right-div {
+      display: flex;
+      justify-content: flex-end!important;
+    }
+    
+    .right-div div {
+      display: none;
+    }
+    .right-div img {
+      display:block;
+      margin-left: auto;
+      margin-right: 0;
+      justify-content: flex-end;
+    }
+    
+    #center{
+        align-items: center;
+        justify-content: center;
+        clear: both;
+        text-align: center;
+        background-color: rgb(74, 127, 185);
+        height: 250px;
+        position: relative;
+    }
+    #center h3{
+    
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* 特別了解此行 */
+    }
+    
+    .content{
+   
+    /* background-color: rgb(94, 94, 18); */
+    width:90%;
+    /* justify-content: center; */
+    align-items: center;
+    /* justify-content: space-between; */
+    }
+  .content1{
+      display: flex;
+      /* flex-wrap: wrap; */
+      align-items: center;
+      /* justify-content: space-between; */
+      clear: both;
+      text-align: left;
+      height:50px;
+      margin: 0 auto;
+      /* width:1200px; */
+      flex-wrap: wrap;
+      column-gap: 10%;
+      row-gap:20px;
+    }
+    #promotion1{
+        flex:none;
+        width:100%;
+        /* margin-left: 20px; */
+        background-color: rgb(176, 199, 192);
+        /* flex-grow:1; */
+    }
+    #promotion2{
+        /* flex-grow:1; */
+        width: 100%;
+        justify-content: end;
+        /* margin-left: auto;  */
+        background-color: rgb(176, 199, 192);
+        
+    }
+    #promotion3{
+        flex-grow: 1;
+        width:100%;
+
+        background-color: rgb(176, 199, 192);
+        
+    }
+    .content1 img{
+        width:80px;
+        float: left;
+        height:50px;
+        margin-right: 10px;
+    }
+    .promotion span {
+      flex: 1;
+      /* align-self: flex-start; */
+      /* display: flex;
+      align-items: center;
+      text-align: left; */
+    }
+    .content2{
+      
+      flex-wrap: wrap;
+      
+      justify-content: center;
+      /* clear: both; */
+      margin-top:10px;
+      /* margin: 0 auto; */
+      margin-bottom: 20px;
+      column-gap: 20px;
+      /* width:25%; */
+      row-gap: 20px;
+      
+    }
+    .titlepic img{
+        width:100%;
+        flex-wrap: nowrap;
+        /* width:100%; */
+        /* justify-content: center; */
+        flex-shrink: 1;
+        flex-grow: 0;
+        flex-basis:0;
+        margin-top:20px;
+    }
+    .titlepic2 img{
+    
+        /* margin-right: 20px; */
+        /* display:block; */
+        width:100%;
+        flex-shrink: 1;
+        flex-grow: 0;
+        flex-basis:0;
+        /* float: left; */
+    }
+    .title{
+        width:100%;
+        background-color: rgb(176, 199, 192);
+        /* flex:none; */
+        
+        flex-shrink: 1;
+        flex-grow: 0;
+        flex-basis:0;
+    }
+    .left-box {
+      margin-right: 0;
+    }
+    .wrapper {
+      display: flex;
+      justify-content: center;
+    }
+      }  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+  
