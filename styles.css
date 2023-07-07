@@ -128,10 +128,15 @@
   .title {
     width: 183px;
     background-color: rgb(176, 199, 192);
-    /* flex:none; */
     flex-shrink: 1;
     flex-grow: 1;
     text-align: center;
+    height: 40px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .left-box {
@@ -301,10 +306,15 @@
   }
 
   .title {
-    /* width:22%; */
     background-color: rgb(176, 199, 192);
     width: 100%;
     text-align: center;
+    height: 40px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .left-box {
@@ -480,6 +490,12 @@
     flex-shrink: 1;
     flex-grow: 0;
     flex-basis: 0;
+    height: 40px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .left-box {
