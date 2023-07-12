@@ -91,11 +91,16 @@ print("=== Task5 ===")
 def find_index_of_car(seats, status, number):
 # your code here
     final = -1
+    li = {}
     for i in range(len(seats)):
         if seats[i] >= number and status[i]==1:#要視為數字不是字串
-            final = i+1
-            break
-    print(final)
+            seat = seats[i]
+            remaining=seat-number
+            li[remaining]=i
+    if len(li) == 0:    
+        print(final)
+    else:
+        print(li[min(li)])
 find_index_of_car([3, 1, 5, 4, 2], [0, 1, 0, 1, 1], 2) # print 4 
 find_index_of_car([1, 0, 5, 1, 3], [0, 1, 0, 1, 1], 4) # print -1 
 find_index_of_car([4, 6, 5, 8], [0, 1, 1, 1], 4) # print 2

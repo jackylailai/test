@@ -116,13 +116,21 @@ console.log("=== task5 ===");
 function findIndexOfCar(seats, status, number){
     // your code here
     let final = -1;
+    let obj = {}
     for(let i=0;i<seats.length;i++){
-        if(seats[i]>number && status[i]){
-            final = i+1;
-            break;
+        if(seats[i]>=number && status[i]){
+            let seat = seats[i];
+            let remaining = seat - number;
+            //中括弧表示要用變數，.表示要用這個名字當屬性名稱
+            obj[remaining]=i;
         }
     }
-    console.log(final)
+    if(Object.keys(obj).length===0){
+        console.log(final);
+    }else{
+        let arr = Object.keys(obj);
+        console.log(obj[Math.min(...arr)]);
+    }
 }
 findIndexOfCar([3, 1, 5, 4, 2], [0, 1, 0, 1, 1], 2); // print 4 
 findIndexOfCar([1, 0, 5, 1, 3], [0, 1, 0, 1, 1], 4); // print -1 
