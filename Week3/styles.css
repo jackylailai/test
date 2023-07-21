@@ -1,0 +1,512 @@
+@media (min-width: 1200px) {
+
+  .left-div {
+    float: left;
+  }
+
+  .right-div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+
+  .right-div div {
+    margin-left: 10px;
+    white-space: nowrap;
+  }
+
+  .right-div img {
+    display: none;
+  }
+
+  #center {
+    align-items: center;
+    justify-content: center;
+    clear: both;
+    text-align: center;
+    background-color: rgb(74, 127, 185);
+    height: 250px;
+    position: relative;
+  }
+
+  #center h3 {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 特別了解此行 */
+  }
+
+  .content {
+
+    /* background-color: rgb(94, 94, 18); */
+    width: 1200px;
+    /* justify-content: space-between; */
+  }
+
+  .content1 {
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: center;
+    clear: both;
+    text-align: left;
+    height: 50px;
+    margin: 0 auto;
+    gap: 20px;
+    /* width:1200px; */
+  }
+
+  #promotion1 {
+    flex-grow: 1;
+    width: calc(100%/ 3);
+    display: flex;
+    align-items: center;
+    background-color: rgb(176, 199, 192);
+  }
+
+  #promotion2 {
+    display: flex;
+    align-items: center;
+    width: calc(100%/ 3);
+    flex-grow: 1;
+    background-color: rgb(176, 199, 192);
+  }
+
+  #promotion3 {
+    flex-grow: 1;
+    width: calc(100%/ 3);
+    display: flex;
+    align-items: center;
+    background-color: rgb(176, 199, 192);
+    flex-wrap: nowrap;
+  }
+
+  .content1 img {
+    width: 80px;
+    float: left;
+    margin-right: 10px;
+  }
+
+  .promotion span {
+    flex: 1;
+    /* align-self: flex-start; */
+    /* display: flex;
+    align-items: center;
+    text-align: left; */
+  }
+
+  .content2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* clear: both; */
+    /* margin: 0 auto; */
+    gap: 20px;
+    margin-top: 20px;
+    max-height: 200px;
+  }
+
+  .titlepic {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+  }
+
+  .titlepic img {
+
+    display: flex;
+    display: block;
+    width: 183px;
+    flex-shrink: 1;
+    flex-grow: 1;
+  }
+
+
+  .title {
+    width: 183px;
+    background-color: rgb(176, 199, 192);
+    flex-shrink: 1;
+    flex-grow: 1;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .image {
+    max-height: 200px; /* 設定圖片的最大高度為 200px */
+  }
+  .left-box {
+    margin-right: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+
+
+  .left-div {
+    float: left;
+  }
+
+  .right-div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+
+  .right-div div {
+    margin-left: 10px;
+    white-space: nowrap;
+  }
+
+  .right-div img {
+    display: none;
+  }
+
+  #center {
+    align-items: center;
+    justify-content: center;
+    clear: both;
+    text-align: center;
+    background-color: rgb(74, 127, 185);
+    height: 250px;
+    position: relative;
+  }
+
+  #center h3 {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 特別了解此行 */
+  }
+
+  .content {
+
+    /* background-color: rgb(94, 94, 18); */
+    width: 90%;
+    /* justify-content: center; */
+    align-items: center;
+    /* justify-content: space-between; */
+    flex-shrink: 0;
+  }
+
+  .content1 {
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    /* justify-content: space-between; */
+    clear: both;
+    text-align: left;
+    margin: 0 auto;
+    /* width:1200px; */
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  #promotion1 {
+    display: flex;
+    align-items: center;
+    width: calc(90%/ 2);
+    /* margin-left: 20px; */
+    background-color: rgb(176, 199, 192);
+    flex-grow: 1;
+  }
+
+  #promotion2 {
+    display: flex;
+    align-items: center;
+    width: calc(90%/2);
+    justify-content: end;
+    /* margin-left: auto;  */
+    background-color: rgb(176, 199, 192);
+    flex-grow: 1;
+  }
+
+  #promotion3 {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(176, 199, 192);
+
+  }
+
+  .content1 img {
+    width: 80px;
+    float: left;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .promotion span {
+    flex: 1;
+    /* align-self: flex-start; */
+    /* display: flex;
+  align-items: center;
+  text-align: left; */
+  }
+
+  .content2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .titlepic {
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 20%;
+  }
+
+  .titlepic img {
+    /* width: 100%; */
+    display: flex;
+    /* justify-content: center; */
+    display: block;
+  }
+
+  #pic1,
+  #pic2,
+  #pic3,
+  #pic4 {
+    width: 100%;
+    flex: none;
+  }
+
+  #pic5,
+  #pic6,
+  #pic7,
+  #pic8 {
+    width: 100%;
+  }
+
+  #pic9,
+  #pic10,
+  #pic11,
+  #pic12 {
+    width: 100%;
+  }
+
+  .title {
+    background-color: rgb(176, 199, 192);
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left-box {
+    margin-right: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 600px) {
+
+  .top {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .left-div {
+    float: left;
+
+  }
+
+  .right-div {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .right-div div {
+    display: none;
+  }
+
+  .right-div img {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+
+  }
+
+  #center {
+    align-items: center;
+    justify-content: center;
+    clear: both;
+    text-align: center;
+    background-color: rgb(74, 127, 185);
+    height: 250px;
+    position: relative;
+  }
+
+  #center h3 {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 特別了解此行 */
+  }
+
+  .content {
+
+    /* background-color: rgb(94, 94, 18); */
+    width: 90%;
+    /* justify-content: center; */
+    align-items: center;
+    /* justify-content: space-between; */
+  }
+
+  .content1 {
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    clear: both;
+    text-align: left;
+
+    margin: 0 auto;
+    /* width:1200px; */
+    flex-wrap: wrap;
+    column-gap: 10%;
+    row-gap: 20px;
+    margin-top: 20px;
+  }
+
+  #promotion1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* margin-left: 20px; */
+    background-color: rgb(176, 199, 192);
+    /* flex-grow:1; */
+  }
+
+  #promotion2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: end;
+    /* margin-left: auto;  */
+    background-color: rgb(176, 199, 192);
+
+  }
+
+  #promotion3 {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(176, 199, 192);
+
+  }
+
+  .content1 img {
+    width: 80px;
+    float: left;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .promotion span {
+    flex: 1;
+    /* align-self: flex-start; */
+    /* display: flex;
+      align-items: center;
+      text-align: left; */
+  }
+
+  .content2 {
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+    /* clear: both; */
+
+    /* margin: 0 auto; */
+    margin-bottom: 20px;
+    column-gap: 20px;
+    /* width:25%; */
+    row-gap: 20px;
+
+  }
+
+  .titlepic img {
+    width: 100%;
+
+    /* width:100%; */
+    /* justify-content: center; */
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: 0;
+    margin-top: 20px;
+    display: block;
+  }
+
+  .titlepic2 img {
+
+    /* margin-right: 20px; */
+    /* display:block; */
+    width: 100%;
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: 0;
+    /* float: left; */
+  }
+
+  .title {
+    width: 100%;
+    background-color: rgb(176, 199, 192);
+    /* flex:none; */
+    text-align: center;
+    flex-shrink: 1;
+    flex-grow: 0;
+    flex-basis: 0;
+    height: 40px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left-box {
+    margin-right: 0;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
