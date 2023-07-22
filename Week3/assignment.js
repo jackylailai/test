@@ -32,7 +32,7 @@ fetch('https://padax.github.io/taipei-day-trip-resources/taipei-attractions-assi
         }
 
         // 將後續的區塊插入圖片和文字
-        for (let i = 3; i < attractions.length; i++) {
+        for (let i = 3; i < 15; i++) {
             const title = attractions[i].stitle;
             console.log("for內", title);
             titles.push(title);

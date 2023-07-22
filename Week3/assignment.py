@@ -25,7 +25,12 @@ if not os.path.exists(output_file):
         # 寫入每一筆資料
         for item in data['result']['results']:
             address = item['address'].split('市', 1)[1].split('區', 1)[0]+ "區"
-            image_url = item['file'].split('jpg',1)[0]+'jpg'
+            capital = item['file'].split('JPG',1)[0]+'jpg'
+            lower = item['file'].split('jpg',1)[0]+'jpg'
+            if len(capital)<len(lower):
+                image_url = item['file'].split('JPG',1)[0]+'jpg'
+            else:
+                image_url = item['file'].split('jpg',1)[0]+'jpg'
             row = {
                 'stitle': item['stitle'],
                 'address': address,
@@ -51,14 +56,22 @@ for i in data['result']['results']:
     if mrt not in mrt_dic:
         mrt_dic[mrt]=[]
     mrt_dic[mrt].append(i['stitle'])
-mrt_dic[mrt]
 output_file2="Week3/mrt_tour.csv"
+
 if not os.path.exists(output_file2):
     with open(output_file2,'w',newline='')as file:
         writer = csv.writer(file)
-        writer.writerow(['MRT station','Attractions'])
+        fields = ['MRT station'] + [f'Attraction{i+1}' for i in range(max(len(attractions) for attractions in mrt_dic.values()))]
+        #表格填寫mrt，後續補上景點，首先先將所有景點遍歷找出所有景點的字典長度(此字典包含mrt:attractions)，
+        #然後找出最大的值，再將最大值列入另一迴圈寫入表格(按照1,2,3...)，但因為索引值從一開始，統一加一。
+        writer.writerow(fields)
+        print(fields)
         for mrt,attractions in mrt_dic.items():
-            writer.writerow([mrt,",".join(attractions)])
+            row_data = [mrt] + attractions#attractions是value的list
+            # 缺少欄位補上空值
+            if len(row_data) < len(fields):
+                row_data.extend([''] * (len(fields) - len(row_data)))
+            writer.writerow(row_data)
         print("mrt finished")
 else:
     print("mri existed")
