@@ -41,6 +41,9 @@ def error():
 def signout():
     del session["username"]
     return redirect("/")
-
+@app.route("/square/<int:number>")
+def square(number):#傳入參數
+    square_ans = number**2
+    return render_template("result.html",result=square_ans)
 if __name__ == "__main__":
     app.run(debug=True,port=3000)
