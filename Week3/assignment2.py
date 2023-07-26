@@ -20,15 +20,15 @@ def get_articles_data(url):
 
 base_url = "https://www.ptt.cc/bbs/movie/index.html"
 
-# Get data from the first page
+# 先抓第一頁的東西及可以推演的內容
 response = requests.get(base_url)
 soup = BeautifulSoup(response.text, "html.parser")
 prev_page_link = soup.find("a", string="‹ 上頁")["href"]
 page_index = int(prev_page_link[prev_page_link.index("index") + len("index"):prev_page_link.index(".html")])
-
+#先抓index字的索引值然後針對字串[:]索引某數到某數，會求得一組index數字例如9640
 article_data = get_articles_data(base_url)
 
-# Get data from the previous three pages
+# 拿可以推演的內容反推索引要更改的值依序扣一
 for i in range(3):
     page_index -= 1
     prev_page_url = f"https://www.ptt.cc/bbs/movie/index{page_index}.html"
