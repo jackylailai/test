@@ -1,4 +1,4 @@
-##以下為data.sql的指令
+## 以下為data.sql的指令
 ---
 ```
 CREATE DATABASE website;
