@@ -7,7 +7,6 @@ CREATE DATABASE website;
 ```
 USE website;
 ```
-![SQL command result](create_member.png)
 ---
 ```
 CREATE TABLE member (
