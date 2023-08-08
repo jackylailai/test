@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Member Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesMember.css') }}">
+</head>
+
+<body>
+    
+        <div class="title">
+            <h1>歡迎光臨，這是會員頁</h1>
+        </div>
+        <div class="content">
+            <h3>{{name}}，歡迎登入系統</h3><br>
+            <a href="/signout">登出</a>
+        </div>
+        <hr>
+        <div class="comment">
+            
+            <h3>快來留言吧</h3>
+            <form action="/createMessage" method="POST">
+                <label for="content">內容</label>
+                <input type="text" id="comment" name="comment"><br><br>
+                <div class="button">
+                    <input type="submit" value="送出">
+                </div>
+        </div>
+        </form>
+        <div>
+            <hr>
+            {% for message in messages %}
+            <div class="message">
+                <p>{{ message[0] }}：{{ message[1] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    
+</body>
+
+</html>
