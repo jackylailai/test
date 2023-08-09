@@ -3,7 +3,7 @@ import mysql.connector
 import os
 from dotenv import load_dotenv
 
-# 載入 .env 文件中的環境變數
+# 載入.env文件中的環境變數
 load_dotenv()
 # 從環境變數中讀取資料庫配置
 db_config = {
@@ -41,7 +41,7 @@ def signup():
     cursor.execute(query, (username,))
     result = cursor.fetchone()
     if result:
-        return redirect(url_for("error", message="該帳號已存在"))
+        return redirect(url_for("error", message="帳號已經被註冊"))
     query = "INSERT INTO member (name, username, password) VALUES (%s, %s, %s)"
     cursor.execute(query, (name, username, password))
     connection.commit()

@@ -7,50 +7,48 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <!-- <script src="{{ url_for("static", filename="js/home.js" ) }}"></script> -->
+    <script src="{{ url_for("static", filename="js/home.js" ) }}"></script>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="title">
-            <h1>歡迎光臨，請註冊登入系統</h1>
-        </div>
-        <div class="secondpart">
-            <h3 class="agree">註冊帳號</h3><br>
-            <form method="POST" action="/signup" class="signup">
-                <div class="form">
-                    <label for="fullname">姓名</label>
-                    <input type="text" id="fullname" name="fullname" ><br>
-                </div>
-                <div class="form">
-                    <label for="username">帳號</label>
-                    <input type="text" id="username" name="username" ><br>
-                </div>
-                <div class="form">
-                    <label for="password">密碼</label>
-                    <input type="password" id="password" name="password" >
-                </div>
-                <div class="button">
-                <button type="submit">註冊</button>
-                </div>
-            </form>
-            
-        </div>
-        <div class="content">
-            
-            <form method="POST" action="/signin" id="signinForm">
-                <h3 class="agree">登入系統</h3><br>
-                <label for="username">帳號</label>
-                <input type="text" id="username" name="username"><br><br>
 
-                <label for="password">密碼</label>
-                <input type="password" id="password" name="password"><br><br>
-                <div class="button">
-                    <input type="submit" value="登入">
-                </div>
-            </form>
-        </div>
+    <div class="title">
+        <h1>歡迎光臨，請註冊登入系統</h1>
     </div>
+    <div class="secondpart">
+        <h3 class="agree">註冊帳號</h3><br>
+        <form method="POST" action="/signup" class="signup" id="signupForm">
+            <div class="form">
+                <label for="fullname">姓名</label>
+                <input type="text" id="fullname" name="fullname"><br>
+            </div>
+            <div class="form">
+                <label for="username">帳號</label>
+                <input type="text" id="username" name="username"><br>
+            </div>
+            <div class="form">
+                <label for="password">密碼</label>
+                <input type="password" id="password" name="password">
+            </div>
+            <div class="button">
+                <button type="submit">註冊</button>
+            </div>
+        </form>
+        <hr>
+    </div>
+    <div class="content">
+        <form method="POST" action="/signin" id="signinForm">
+            <h3 class="agree">登入系統</h3><br>
+            <label for="username">帳號</label>
+            <input type="text" id="username2" name="username"><br><br>
+            <label for="password">密碼</label>
+            <input type="password" id="password2" name="password"><br><br>
+            <div class="button">
+                <input type="submit" value="登入">
+            </div>
+        </form>
+    </div>
+
 </body>
 
 </html>
