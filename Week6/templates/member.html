@@ -7,6 +7,7 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesMember.css') }}">
+    <script src="{{ url_for("static", filename="js/member.js" ) }}"></script>
 </head>
 
 <body>
@@ -35,6 +36,12 @@
         {% for message in messages %}
         <div class="message">
             <p>{{ message[0] }}：{{ message[1] }}</p>
+            {% if name == message[0] %}
+            <form method="POST" action="/deleteMessage" class="deleteform">
+                <input type="hidden" name="message" value="{{ message[1] }}">
+                <button type="submit" class="deletebutton">X</button>
+            </form>
+            {% endif %}
         </div>
         {% endfor %}
     </div>

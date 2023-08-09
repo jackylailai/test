@@ -64,3 +64,7 @@ hr {
     align-items: center;
     margin-top: 10px
 }
+.deletebutton {
+    font-size: 12px; 
+    padding: 4px 8px; 
+}

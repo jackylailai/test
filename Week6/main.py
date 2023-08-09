@@ -74,8 +74,6 @@ def member():
         query = "SELECT member.name, message.content FROM message JOIN member ON message.member_id = member.id ORDER BY message.time DESC"
         cursor.execute(query)
         messages = cursor.fetchall()
-        for i in messages:
-            print("message",i)
         return render_template("member.html", messages=messages, name=user_name)
     return redirect(url_for('home'))
 @app.route("/createMessage", methods=["POST"])
@@ -102,6 +100,21 @@ def create_message():
 def error():
     error_message = request.args.get("message")
     return render_template("error.html", error_message=error_message)
+
+@app.route("/deleteMessage", methods=["POST"])
+def delete_message():
+    if "username" in session:
+        name = session["username"]
+        message = request.form.get("message")
+        if message:
+            query_id = "SELECT id FROM member WHERE username = %s"
+            cursor.execute(query_id, (name,))
+            member_id = cursor.fetchone()[0]
+            
+            query = "DELETE FROM message WHERE content = %s and member_id= %s"
+            cursor.execute(query, (message,member_id))
+            connection.commit()
+    return redirect(url_for("member"))
 
 @app.route("/signout")
 def signout():
