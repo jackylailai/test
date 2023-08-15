@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Member Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stylesMember.css') }}">
+    <script src="{{ url_for("static", filename="js/member.js" ) }}"></script>
+</head>
+
+<body>
+
+    <div class="title">
+        <h1>歡迎光臨，這是會員頁</h1>
+    </div>
+    <div class="content">
+        <h3>{{name}}，歡迎登入系統</h3><br>
+        <a href="/signout">登出系統</a>
+    </div>
+    <hr>
+    <div class="comment">
+
+        <h3>快來留言吧</h3><br>
+        <form action="/createMessage" method="POST">
+            <label for="content">內容</label>
+            <input type="text" id="comment" name="comment"><br><br>
+            <div class="button">
+                <input type="submit" value="送出">
+            </div>
+    </div>
+    </form>
+    <div>
+        <hr>
+        {% for message in messages %}
+        <div class="message">
+            <p>{{ message[0] }}：{{ message[1] }}</p>
+            {% if name == message[0] %}
+            <form method="POST" action="/deleteMessage" class="deleteform">
+                <input type="hidden" name="message" value="{{ message[1] }}">
+                <button type="submit" class="deletebutton">X</button>
+            </form>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    <hr>
+<div class="comment">
+    <h3>查詢會員姓名</h3><br>
+    <div class="forbutton">
+        <input type="text" id="usernameInput" placeholder="輸入會員帳號"><br>
+        <button class="button" id="searchButton">查詢</button><br>
+    </div>
+    <div id="result"></div>
+</div>
+<hr>
+<div class="comment">
+    <h3>更新我的姓名</h3><br>
+    <div class="forbutton">
+        <input type="text" id="usernameUpdate" placeholder="輸入新的姓名"><br>
+        <button class="button" id="updateButton">更新</button><br>
+    </div>
+    <div id="result2"></div>
+</div>
+</body>
+
+</html>
